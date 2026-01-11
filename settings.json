@@ -1,5 +1,5 @@
 {
-  "token": "${DISCORD_TOKEN}",
+  "token": "${token}",
   "client_id": "1450532519182209186",
   "genius_token": "${GENIUS_TOKEN}",
   "mongodb_url": "${MONGODB_URL}",
