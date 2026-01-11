@@ -29,8 +29,6 @@ import update
 import logging
 import voicelink
 import function as func
-import threading
-import web
 from discord.ext import commands
 from ipc import IPCClient
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -250,8 +248,13 @@ bot = Vocard(
     intents=intents
 )
 print("TOKEN:", repr(func.settings.token))
+
 if __name__ == "__main__":
     update.check_version(with_msg=True)
-    # Start fake HTTP server for Render
-threading.Thread(target=web.run, daemon=True).start()
+
+    # Fake HTTP server for Render Web Service
+    import threading
+    import web
+    threading.Thread(target=web.run, daemon=True).start()
+
     bot.run(func.settings.token, root_logger=True)
