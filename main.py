@@ -21,7 +21,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
 import os
-PORT = int(os.environ.get("PORT", 3000)), 
+PORT = int(os.environ.get("PORT", 3000))
 import discord
 import sys
 import aiohttp
