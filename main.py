@@ -248,7 +248,7 @@ bot = Vocard(
     case_insensitive=True,
     intents=intents
 )
-
+print("TOKEN:", repr(func.settings.token))
 if __name__ == "__main__":
     update.check_version(with_msg=True)
     bot.run(func.settings.token, root_logger=True)
