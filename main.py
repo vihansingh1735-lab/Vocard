@@ -20,17 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 """
-import os
-from flask import Flask
-
-app = Flask(__name__)
-
-@app.route("/")
-def home():
-    return "Bot alive"
-
-PORT = int(os.environ.get("PORT", 3000))
-app.run(host="0.0.0.0", port=PORT)
+PORT = int(os.environ.get("PORT", 3000), 
 import discord
 import sys
 import aiohttp
