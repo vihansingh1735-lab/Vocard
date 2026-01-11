@@ -1,14 +1,12 @@
 {
   "client_id": "1450532519182209186",
-  "genius_token": "${GENIUS_TOKEN}",
-  "mongodb_url": "${MONGODB_URL}",
   "mongodb_name": "vihansingh1735",
 
   "nodes": {
     "DEFAULT": {
       "host": "lava-v4.ajieblogs.eu.org",
       "port": 443,
-      "password": "${LAVALINK_PASSWORD}",
+      "password": "ajieblogs",
       "secure": true,
       "identifier": "DEFAULT"
     }
