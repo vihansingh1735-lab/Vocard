@@ -34,7 +34,7 @@ from ipc import IPCClient
 from motor.motor_asyncio import AsyncIOMotorClient
 from logging.handlers import TimedRotatingFileHandler
 from addons import Settings
-
+PORT = int(os.environ.get("PORT", 10000))
 class Translator(discord.app_commands.Translator):
     async def load(self):
         func.logger.info("Loaded Translator")
@@ -247,7 +247,7 @@ bot = Vocard(
     case_insensitive=True,
     intents=intents
 )
-PORT = int(os.environ.get("PORT", 10000))
+
 print("TOKEN:", repr(func.settings.token))
 if __name__ == "__main__":
     update.check_version(with_msg=True)
