@@ -252,9 +252,18 @@ print("TOKEN:", repr(func.settings.token))
 if __name__ == "__main__":
     update.check_version(with_msg=True)
 
-    # Fake HTTP server for Render Web Service
+    import asyncio
     import threading
     import web
-    threading.Thread(target=web.run, daemon=True).start()
 
-    bot.run(func.settings.token, root_logger=True)
+    async def start_bot():
+        await bot.start(func.settings.token)
+
+    def run_bot():
+        asyncio.run(start_bot())
+
+    # Start Discord bot in background
+    threading.Thread(target=run_bot, daemon=True).start()
+
+    # Start fake HTTP server (keeps Render alive)
+    web.run()
