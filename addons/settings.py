@@ -39,7 +39,7 @@ class Settings:
 
         # ================= BOT SETTINGS =================
 
-        self.invite_link: str = "https://discord.gg/wRCgB7vBQv"
+        self.invite_link: str = "https://discord.gg/"
 
         self.nodes: Dict[str, Dict[str, Union[str, int, bool]]] = settings.get(
             "nodes", {}
