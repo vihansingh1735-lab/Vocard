@@ -1,6 +1,6 @@
 {
   "token": "${DISCORD_TOKEN}",
-  "client_id": "${CLIENT_ID}",
+  "client_id": "1450532519182209186",
   "genius_token": "${GENIUS_TOKEN}",
   "mongodb_url": "${MONGODB_URL}",
   "mongodb_name": "vihansingh1735",
